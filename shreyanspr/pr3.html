@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+  <head>
+ 
+    <title>program - 3</title>
+  </head>
+  <body>
+    <script>
+        n1=prompt("enter the first number :- ")
+        n2=prompt("enter the second number :- ")
+         flag = 0;
+
+        for ( i = n1; i < n2; i++) {
+            for (let j = 2; j < n1/2; j++) {
+
+                if (n1%j==0) {
+                document.write("this is prime number   "+n1);
+                // n1=n1+1;
+                flag=1;
+               break;
+
+             }
+         }    
+        }
+        if (i > 1 && flag == 0) {
+            document.write("this is not prime number   "+n1);
+
+    }
+        
+    </script>
+  </body>

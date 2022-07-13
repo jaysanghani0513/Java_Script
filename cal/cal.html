@@ -9,40 +9,52 @@
   </head>
   <body><div class="container" >
      
-    <h1 class="mt-4" style="text-align: center;"> Basic Calculator</h1>
-    <table class="table mt-4 table-bordered" style="align-items:center ;">
+    <h1 class="mt-4" style="text-align: center;"> BASIC CALCULATOR</h1>
+    <table class="table mt-4 table-bordered" style="align-items:center ; background-color: #80938F;">
         <thead>
           <tr>
             <!-- <th colspan="4"><input type="text" style="width:100% ;"  id="display" > </th> -->
-            <th colspan="4"> <input type="text" class="form-control" id="display" aria-describedby="emailHelp" placeholder="Enter value yaar"></th>
+            <th colspan="5"> <input type="text" style="background-color:#D9EEEA ; height: 55px; text-align: right;" class="form-control" id="display" aria-describedby="emailHelp" placeholder="Enter value yaar"></th>
           </tr>
         </thead>
         <tbody>
           <tr>
             <!-- <th scope="row"> <button type="button" class="btn btn-light">Light</button></th> -->
-            <th scope="row"> <input class="btn btn-secondary" style="width:100% ;" onclick="enterdata(value)" type="button" value="7" ></th>
-            <th scope="row"> <input class="btn btn-secondary" style="width:100% ;" onclick="enterdata(value)" type="button" value="8" ></th>
-            <th scope="row"> <input class="btn btn-secondary" style="width:100% ;" onclick="enterdata(value)" type="button" value="9" ></th>
-            <th scope="row"> <input class="btn btn-secondary" style="width:100% ;" onclick="opdata(value)" type="button" value="*" ></th>
+            <th scope="row"> <input class="btn btn-light" style="width:100% ;" onclick="xddata()" type="button" value="1/x" ></th>
+            <th scope="row"> <input class="btn btn-light" style="width:100% ;" onclick="squaredata()" type="button" value="x^2" ></th>
+            <th scope="row"> <input class="btn btn-light" style="width:100% ;" onclick="rootdata(value)" type="button" value="2(root)x" ></th>
+            <th scope="row"> <input class="btn btn-light" style="width:100% ;" onclick="opdata(value)" type="button" value="/" ></th>
+            <th scope="row"> <input class="btn btn-light" style="width:100% ;" onclick="cldata()" type="button" value="CE" ></th>
+        
+          </tr>      
+          <tr>
+            <!-- <th scope="row"> <button type="button" class="btn btn-light">Light</button></th> -->
+            <th scope="row"> <input class="btn btn-light" style="width:100% ;" onclick="enterdata(value)" type="button" value="7" ></th>
+            <th scope="row"> <input class="btn btn-light" style="width:100% ;" onclick="enterdata(value)" type="button" value="8" ></th>
+            <th scope="row"> <input class="btn btn-light" style="width:100% ;" onclick="enterdata(value)" type="button" value="9" ></th>
+            <th scope="row"> <input class="btn btn-light" style="width:100% ;" onclick="opdata(value)" type="button" value="*" ></th>
+            <th scope="row"> <input class="btn btn-light" style="width:100% ;" onclick="opdata(value)" type="button" value="(" ></th>
         
           </tr>
           <tr>
-            <th scope="row"> <input class="btn btn-secondary" style="width:100% ;" onclick="enterdata(value)" type="button" value="4" ></th>
-            <th scope="row"> <input class="btn btn-secondary" style="width:100% ;" onclick="enterdata(value)" type="button" value="5" ></th>
-            <th scope="row"> <input class="btn btn-secondary" style="width:100% ;" onclick="enterdata(value)" type="button" value="6" ></th>
-            <th scope="row"> <input class="btn btn-secondary" style="width:100% ;" onclick="opdata(value)" type="button" value="-" ></th>
+            <th scope="row"> <input class="btn btn-light" style="width:100% ;" onclick="enterdata(value)" type="button" value="4" ></th>
+            <th scope="row"> <input class="btn btn-light" style="width:100% ;" onclick="enterdata(value)" type="button" value="5" ></th>
+            <th scope="row"> <input class="btn btn-light" style="width:100% ;" onclick="enterdata(value)" type="button" value="6" ></th>
+            <th scope="row"> <input class="btn btn-light" style="width:100% ;" onclick="opdata(value)" type="button" value="-" ></th>
+            <th scope="row"> <input class="btn btn-light" style="width:100% ;" onclick="opdata(value)" type="button" value=")" ></th>
 
           </tr>
           <tr>
-            <th scope="row"> <input class="btn btn-secondary" style="width:100% ;" onclick="enterdata(value)" type="button" value="1" ></th>
-            <th scope="row"> <input class="btn btn-secondary" style="width:100% ;" onclick="enterdata(value)" type="button" value="2" ></th>
-            <th scope="row"> <input class="btn btn-secondary" style="width:100% ;" onclick="enterdata(value)" type="button" value="3" ></th>
-            <th scope="row"> <input class="btn btn-secondary" style="width:100% ;" onclick="opdata(value)" type="button" value="+" ></th>
+            <th scope="row"> <input class="btn btn-light" style="width:100% ;" onclick="enterdata(value)" type="button" value="1" ></th>
+            <th scope="row"> <input class="btn btn-light" style="width:100% ;" onclick="enterdata(value)" type="button" value="2" ></th>
+            <th scope="row"> <input class="btn btn-light" style="width:100% ;" onclick="enterdata(value)" type="button" value="3" ></th>
+            <th scope="row"> <input class="btn btn-light" style="width:100% ;" onclick="opdata(value)" type="button" value="%" ></th>
+            <th scope="row" rowspan="2"> <input class="btn btn-light" style="width:100% ;height: 105px;" onclick="opdata(value)" type="button" value="+" ></th>
           </tr>
           <tr>
-            <th scope="row"> <input class="btn btn-secondary" style="width:100% ;" onclick="enterdata(value)" type="button" value="." ></th>
-            <th scope="row"> <input class="btn btn-secondary" style="width:100% ;" onclick="enterdata(value)" type="button" value="0" ></th>
-            <th scope="row" colspan="2"> <input class="btn btn-secondary" style="width:100% ;" onclick="eqdata()" type="button" value="=" ></th>
+            <th scope="row"> <input class="btn btn-light" style="width:100% ;" onclick="enterdata(value)" type="button" value="." ></th>
+            <th scope="row"> <input class="btn btn-light" style="width:100% ;" onclick="enterdata(value)" type="button" value="0" ></th>
+            <th scope="row" colspan="2"> <input class="btn btn-light" style="width:100% ;" onclick="eqdata()" type="button" value="=" ></th>
           </tr>
         </tbody>
       </table>
@@ -51,6 +63,9 @@
 
 
         <script>
+          function cldata() {
+            document.getElementById("display").value=0
+          }
             temp1=0
             function enterdata(value) {
                 s=value.lenth
@@ -70,7 +85,7 @@
             function opdata(value) {
                 temp=document.getElementById("display").value;
                 temp=temp+value;
-                document.getElementById("display").value+=value;
+                document.getElementById("display").value +=value;
                 console.log(temp);
 
                 // n = value;
@@ -81,8 +96,20 @@
                 console.log(temp);
 
                 temp=document.getElementById("display").value;
-                ans=eval(temp1);
+                ans=eval(temp);
                 document.getElementById("display").value=ans;
+            }
+            function squaredata() {
+              square=document.getElementById("display").value;
+              document.getElementById("display").value=square*square;
+            }
+            function xddata() {
+              xd=document.getElementById("display").value;
+              document.getElementById("display").value=1/xd;
+            }
+            function rootdata(params) {
+              x=document.getElementById("display").value
+              document.getElementById("display").value=Math.sqrt(x)
             }
         </script>
 

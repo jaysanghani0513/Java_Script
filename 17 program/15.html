@@ -1,0 +1,33 @@
+<html>
+  <head>
+    <title>Prime Number Using Function</title>
+  </head>
+
+  <body>
+    <h1>Prime Number Using Function</h1>
+    <script>
+      var n = parseInt(
+        prompt("Enter any Positive Number to check its prime or not : ")
+      );
+      primeOrNot(n);
+
+      function primeOrNot(n) {
+        factor = 0;
+        if (n == 1) {
+          document.write("1 is neither prime nor composite");
+        } else {
+          for (i = 2; i < n; i++) {
+            if (n % i == 0) {
+              factor++;
+            }
+          }
+        }
+        if (factor > 0) {
+          document.write(i + " is not a prime number");
+        } else {
+          document.write(i + " is a prime number");
+        }
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,30 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Prime Btw Two No.</title>
+  </head>
+  <body>
+    <h1>Prime Btw Two No.s</h1>
+    <script>
+      flag = false;
+
+      num1 = parseInt(prompt("Enter Num1 : "));
+      num2 = parseInt(prompt("Enter num2 : "));
+
+      for (i = num1; i < num2; i++) {
+        flag = false;
+
+        for (j = 2; j <= i / 2; j++) {
+          if (i % j == 0) {
+            flag = true;
+          }
+        }
+        if (!flag) {
+          document.write(i + ", ");
+        }
+      }
+    </script>
+  </body>
+</html>

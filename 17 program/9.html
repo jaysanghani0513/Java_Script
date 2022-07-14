@@ -1,0 +1,23 @@
+<html>
+  <head>
+    <title>String Function</title>
+  </head>
+
+  <body>
+    <h1>String Function</h1>
+    <script>
+      var str1 = "Ayush";
+      var str2 = "Mota";
+
+      document.write("charAt : " + str1.charAt(1) + "<br/>");
+      document.write("concat : " + str1.concat(" ", str2) + "<br/>");
+      document.write("indexOf(substr) : " + str1.indexOf("u") + "<br/>");
+      document.write(
+        "indexOf(substr,[start]) : " + str2.indexOf("a", 2) + "<br/>"
+      );
+      document.write(
+        "replace(substr,replacetext) : " + str2.replace("t", "n") + "<br/>"
+      );
+    </script>
+  </body>
+</html>

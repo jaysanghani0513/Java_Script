@@ -1,0 +1,38 @@
+<html>
+  <head>
+    <title>Armstrong Number</title>
+  </head>
+
+  <body>
+    <h1>Armstrong Number</h1>
+    <script>
+      var num = parseInt(prompt("Enter Number : "));
+      var temp1 = num;
+      var temp2 = num;
+      var count = 1;
+      var sum = 0;
+
+      document.write(num + " is ");
+      while (num / 10 >= 1) {
+        num /= 10;
+        count++;
+      }
+
+      while (temp1 >= 1) {
+        b = 1;
+        a = temp1 % 10;
+        for (var i = 1; i <= count; i++) {
+          b = a * b;
+        }
+        sum = sum + b;
+        temp1 = parseInt(temp1 / 10);
+      }
+
+      if (temp2 == sum) {
+        document.write("Armstrong Number");
+      } else {
+        document.write("Not Armstrong Number");
+      }
+    </script>
+  </body>
+</html>

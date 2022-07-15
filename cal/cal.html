@@ -10,37 +10,52 @@
       .textt{
         color: royalblue;
       }
+      .bron{
+        width:100% ; 
+         color: brown;
+      }
+      #eq{
+        width:100% ;
+         background-color: rgb(232, 181, 91);
+      }
+      #bk{
+        width:100% ; background-color: rgb(236, 85, 85);
+      }
+      #ce{
+        width:100% ; color: rgb(0, 0, 0); background-color: rgb(108, 172, 224);
+      }
     </style>
   </head>
-  <body><div class="container" >
+  <hr/>
+  <body background-color: rgb(255, 255, 128);><div class="container" >
      
     <h1 class="mt-4" style="text-align: center;"> BASIC CALCULATOR</h1><HR>
     <table class="table mt-4 table-bordered" style="align-items:center ; background-color: #80938F; border: 1.1px solid black;">
         <thead>
           <tr>
             <!-- <th colspan="4"><input type="text" style="width:100% ;"  id="display" > </th> -->
-            <th colspan="6"> <input type="text" style="background-color:#D9EEEA ; border-color: black; border-width: 2px; border-bottom: -25px; height: 55px; text-align: right;" class="form-control" id="display" aria-describedby="emailHelp" placeholder="Enter value yaar"></th>
+            <th colspan="6"> <input type="text" style="background-color:#D9EEEA ; border-color: black; border-width: 3px; border-bottom: -25px; height: 55px; text-align: right;" class="form-control" id="display" aria-describedby="emailHelp" placeholder="Enter value yaar"></th>
           </tr>
         </thead>
         <tbody>
           <tr>
             <!-- <th scope="row"> <button type="button" class="btn btn-light">Light</button></th> -->
-            <th scope="row"> <input class="btn btn-light" style="width:100% ;" onclick="xddata()" type="button" value="LOG" ></th>
-            <th scope="row"> <input class="btn btn-light" style="width:100% ;" onclick="squaredata()" type="button" value="π" ></th>
-            <th scope="row"> <input class="btn btn-light" style="width:100% ;" onclick="rootdata(value)" type="button" value="LOG10" ></th>
-            <th scope="row"> <input class="btn btn-light" style="width:100% ;" onclick="expdata(value)" type="button" value="EXP" ></th>
-            <th scope="row"> <input class="btn btn-light" style="width:100% ; background-color: rgb(236, 85, 85);" onclick="backspace(value)" type="button" value="BC" ></th>
-            <th scope="row"> <input class="btn btn-light" style="width:100% ; color: rgb(0, 0, 0); background-color: rgb(108, 172, 224); " onclick="cldata()" type="button" value="CE" ></th>
+            <th scope="row"> <input class="btn btn-light bron"  onclick="logdata()" type="button" value="LOG" ></th>
+            <th scope="row"> <input class="btn btn-light bron"  onclick="pidata()" type="button" value="π" ></th>
+            <th scope="row"> <input class="btn btn-light bron"  onclick="log10data()" type="button" value="LOG10" ></th>
+            <th scope="row"> <input class="btn btn-light bron"  onclick="expdata(value)" type="button" value="EXP" ></th>
+            <th scope="row"> <input class="btn btn-light" id="bk"  onclick="backspace(value)" type="button" value="BC" ></th>
+            <th scope="row"> <input class="btn btn-light" id="ce"  onclick="cldata()" type="button" value="CE" ></th>
         
           </tr>
           <tr>
             <!-- <th scope="row"> <button type="button" class="btn btn-light">Light</button></th> -->
             <th scope="row"> <input class="btn btn-light" style="width:100% ;" onclick="xddata()" type="button" value="1/x" ></th>
             <th scope="row"> <input class="btn btn-light" style="width:100% ;" onclick="squaredata()" type="button" value="x^2" ></th>
-            <th scope="row"> <input class="btn btn-light" style="width:100% ;" onclick="rootdata(value)" type="button" value="2(root)x" ></th>
+            <th scope="row"> <input class="btn btn-light" style="width:100% ;" onclick="rootdata(value)" type="button" value="2√x" ></th>
             <th scope="row"> <input class="btn btn-light" style="width:100% ;" onclick="opdata(value)" type="button" value="/" ></th>
             <th scope="row"> <input class="btn btn-light textt" style="width:100% ;" onclick="sdata(value)" type="button" value="SIN" ></th>
-            <th scope="row"> <input class="btn btn-light" style="width:100% ;" onclick="cldata()" type="button" value="e" ></th>
+            <th scope="row"> <input class="btn btn-light bron"  onclick="edata()" type="button" value="e" ></th>
         
           </tr>        
           <tr>
@@ -67,24 +82,80 @@
             <th scope="row"> <input class="btn btn-light" style="width:100% ;" onclick="enterdata(value)" type="button" value="2" ></th>
             <th scope="row"> <input class="btn btn-light" style="width:100% ;" onclick="enterdata(value)" type="button" value="3" ></th>
             <th scope="row"> <input class="btn btn-light" style="width:100% ;" onclick="opdata(value)" type="button" value="%" ></th>
-            <th scope="row"> <input class="btn btn-light textt" style="width:100% ;" onclick="opdata(value)" type="button" value="N!" ></th>
-            <th scope="row" rowspan="2"> <input class="btn btn-light" style="width:100% ;height: 105px; font-size: 20px;" onclick="opdata(value)" type="button" value="+" ></th>
+            <th scope="row"> <input class="btn btn-light bron"  onclick="factdata(value)" type="button" value="N!" ></th>
+            <th scope="row" rowspan="2"> <input class="btn btn-light" style="width:100% ;height: 105px; font-size: 20px;" onclick="opdata(value)" type="button"id="plus" value="+" ></th>
           </tr>
           <tr>
             <th scope="row"> <input class="btn btn-light" style="width:100% ;" onclick="enterdata(value)" type="button" value="." ></th>
             <th scope="row"> <input class="btn btn-light" style="width:100% ;" onclick="enterdata(value)" type="button" value="0" ></th>
-            <th scope="row"> <input class="btn btn-light" style="width:100% ;" onclick="enterdata(value)" type="button" value="0" ></th>
-            <th scope="row" colspan="2"> <input class="btn btn-light" style="width:100% ;" onclick="eqdata()" type="button" value="=" ></th>
+            <th scope="row"> <input class="btn btn-light" style="width:100% ;" onclick="enterdata(value)" type="button" value="00" ></th>
+            <th scope="row" colspan="2"> <input class="btn btn-light" id="eq"  onclick="eqdata()" type="button" value="=" ></th>
           </tr>
         </tbody>
-      </table>
+      </table><hr/>
   </div>
+  <hr/>
 
 
 
         <script>
-          function expdata(value){
+              var  r=0;
+            var g=0;
+            var b=0;
+            setInterval(psinge, 10);
+
+
+            function psinge() {
+
+                if (0<=r<=255&&b==0&&g==0) {
+                r=r+1;
+                document.getElementById("plus").style.backgroundColor = "rgb("+r+","+g+","+b+")"  
+                }
+                if (r==255&&b==0) {
+                g=g+1;
+                document.getElementById("plus").style.backgroundColor = "rgb("+r+","+g+","+b+")"
+
+                }
+                if (r==255&&g==255&&b<=255) {
+                b=b+1;
+                console.log(b);
+
+                document.getElementById("plus").style.backgroundColor = "rgb("+r+","+g+","+b+")"
+
+                }
+                if (r==255&&g==255&&b==256) {
+                  r=g=b=0;
+                }
+        
+              }
             
+          function factdata(value) {
+            nf=document.getElementById("display").value
+            var fact=1;
+            for (let i = 1; i < nf; i++) {
+              fact+=fact*i
+            }
+            document.getElementById("display").value=fact
+          }
+          function edata() {
+            ne=document.getElementById("display").value
+            document.getElementById("display").value=2.71828182846*ne;  
+          }
+          function pidata() {
+            np=document.getElementById("display").value
+            document.getElementById("display").value=3.14159265359*np;
+          }
+          function logdata() {
+            nlo=document.getElementById("display").value
+            document.getElementById("display").value=Math.log(nlo); 
+          }
+          function log10data() {
+            nl=document.getElementById("display").value
+            document.getElementById("display").value=Math.log10(nl);
+          }
+          function expdata(value){
+            ne=document.getElementById("display").value
+            document.getElementById("display").value=Math.exp(ne);
           }
           function backspace()
           {

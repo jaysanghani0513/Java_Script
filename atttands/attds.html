@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+  </head>
+  <body onkeypress="enter()" >
+
+    <div class="mt-4 d-flex justify-content-center">
+    <figure class="figure " style="align-items:center;">
+                <h1 id="main" >heyy! you are absent ?</h1><div class="d-flex justify-content-center">
+                <b type="button" class="mt-4 btn btn-primary d-flex justify-content-center position-relative">
+<div class="d-flex justify-content-center">                   <h1 id="Inbox" onkeypress="enter()" >101</h1>
+                   
+                    <span id="absent" onkeypress="enter()" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                    0
+                    <span class="visually" >absent</span>
+                  </span></div></b></div>
+                </button>
+        <!-- <img src="..." class="figure-img img-fluid rounded" alt="..."> -->
+        <figcaption class="mt-4 figure-caption">A caption for the above image.</figcaption>
+      </figure>
+    </div>
+<div class="container" style="color:rebeccapurple ;" ><h1 onkeypress="enter()" id="ab"></h1></div>
+<script>
+            var  r=0;
+            var g=0;
+            var b=0;
+            setInterval(psinge, 10);
+            function psinge() {
+
+            if (0<=r<=255&&b==0&&g==0) {
+            r=r+1;
+            document.getElementById("main").style.color = "rgb("+r+","+g+","+b+")"  
+            }
+            if (r==255&&b==0) {
+            g=g+1;
+            document.getElementById("main").style.color = "rgb("+r+","+g+","+b+")"
+
+            }
+            if (r==255&&g==255&&b<=255) {
+            b=b+1;
+            console.log(b);
+
+            document.getElementById("main").style.color = "rgb("+r+","+g+","+b+")"
+
+            }
+            if (r==255&&g==255&&b==256) {
+              r=g=b=0;
+            }
+
+            }
+  function enter() {
+    
+    if (event.which==13) {
+     document.getElementById("Inbox").innerHTML=parseInt(document.getElementById("Inbox").innerHTML)+1;
+     if (parseInt(document.getElementById("Inbox").innerHTML)==150) {
+      document.getElementById("Inbox").innerHTML=201
+     }
+    }
+    if (event.which==32) {
+     document.getElementById("ab").innerHTML+=document.getElementById("Inbox").innerHTML+", ";
+     document.getElementById("absent").innerHTML=parseInt(document.getElementById("absent").innerHTML)+1
+     document.getElementById("Inbox").innerHTML=parseInt(document.getElementById("Inbox").innerHTML)+1;
+      
+    }
+  }
+</script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+  </body>
+</html>
+<!-- https://www.youtube.com/watch?v=YSpqHOwYrk4&ab_channel=ProgrammingKnowledge -->

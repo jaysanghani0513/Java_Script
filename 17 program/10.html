@@ -1,0 +1,27 @@
+<html>
+  <head>
+    <title>Two Digit</title>
+  </head>
+
+  <body>
+    <h1>Two Digit</h1>
+    <script>
+      var num = parseInt(prompt("Enter Two Digit Number : "));
+      var final = 1;
+
+      second = num % 10;
+      num = parseInt(num / 10);
+      first = num % 10;
+
+      document.write(first + "<br/>");
+      document.write(second + "<br/>");
+
+      document.write(first + " ^ " + second + " = ");
+      for (var i = 1; i <= second; i++) {
+        final = final * first;
+      }
+
+      document.write(final);
+    </script>
+  </body>
+</html>

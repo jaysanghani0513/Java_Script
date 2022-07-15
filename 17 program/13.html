@@ -1,0 +1,25 @@
+<html>
+
+<head>
+    <title>Array Of Countries</title>
+</head>
+
+<body>
+    <h1>Array Of Countries</h1>
+    <script>
+        var countries = [];
+        var n = parseInt(prompt("Enter array size : "))
+
+        for (i = 0; i < n; i++) {
+
+            countries[i] = prompt("Enter Country Name : ");
+        }
+
+        for (var i = 0; i < n; i++) {
+
+            document.write("countries[" + i + "] : " + countries[i] + "<br/>");
+        }
+    </script>
+</body>
+
+</html>
